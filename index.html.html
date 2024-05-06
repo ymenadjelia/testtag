@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Bidon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire Bidon</h1>
+    <form id="monFormulaire">
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <script>
+        document.getElementById('monFormulaire').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+            var nom = document.getElementById('nom').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            console.log("Nom: " + nom + ", Email: " + email + ", Message: " + message);
+        });
+    </script>
+</body>
+</html>
