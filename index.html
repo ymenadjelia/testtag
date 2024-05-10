@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NKJDZ9GP');</script>
-<!-- End Google Tag Manager -->
-
-
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NKJDZ9GP');</script>
+    <!-- End Google Tag Manager -->
     <title>Formulaire Bidon</title>
     <style>
         body {
@@ -20,33 +18,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 0;
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        form {
+        .container {
             max-width: 400px;
             margin: 0 auto;
         }
 
-        form div {
+        .form-group {
             margin-bottom: 10px;
         }
 
-        label {
+        .form-label {
             display: block;
         }
 
-        input[type="text"],
-        input[type="email"],
-        textarea {
+        .form-input {
             width: 100%;
             padding: 5px;
             font-size: 16px;
             border: 1px solid #ccc;
         }
 
-        button {
+        .submit-btn {
             width: 100%;
             padding: 10px;
             font-size: 18px;
@@ -56,36 +48,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             cursor: pointer;
         }
 
-        button:hover {
+        .submit-btn:hover {
             background-color: #0056b3;
+        }
+
+        .external-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .external-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJDZ9GP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKJDZ9GP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <h1>Formulaire Bidon</h1>
-    <form id="monFormulaire">
-        <div>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom">
+    <form id="monFormulaire" class="container">
+        <div class="form-group">
+            <label for="nom" class="form-label">Nom :</label>
+            <input type="text" id="nom" name="nom" class="form-input">
         </div>
-        <div>
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email">
+        <div class="form-group">
+            <label for="email" class="form-label">Email :</label>
+            <input type="email" id="email" name="email" class="form-input">
         </div>
-        <div>
-            <label for="message">Message :</label>
-            <textarea id="message" name="message"></textarea>
+        <div class="form-group">
+            <label for="message" class="form-label">Message :</label>
+            <textarea id="message" name="message" class="form-input"></textarea>
         </div>
-        <button type="submit">Envoyer</button>
+        <button type="submit" id="envoyerBtn" class="submit-btn">Envoyer</button>
     </form>
-
-<p>Vous pouvez également <a href="seconde-page.html">cliquer ici</a> pour être redirigé vers une autre page.</p>
-
-
+    <p>Vous pouvez également <a href="seconde-page.html" id="lienRedirection" class="external-link">cliquer ici</a> pour être redirigé vers une autre page.</p>
     <script>
         document.getElementById('monFormulaire').addEventListener('submit', function(event) {
             event.preventDefault(); // Empêche l'envoi du formulaire par défaut

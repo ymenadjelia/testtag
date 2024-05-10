@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seconde Page</title>
+    <style>
+        .return-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .return-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Seconde Page</h1>
     <p>Ceci est le contenu de ma seconde page.</p>
-    <button onclick="alert('Vous avez cliqué sur le premier bouton')">Bouton 1</button>
-    <button onclick="alert('Vous avez cliqué sur le deuxième bouton')">Bouton 2</button>
+    <button id="bouton1" onclick="alert('Vous avez cliqué sur le premier bouton')">Bouton 1</button>
+    <button id="bouton2" onclick="alert('Vous avez cliqué sur le deuxième bouton')">Bouton 2</button>
 
-    <!-- Ajoutez un bouton pour revenir à la première page -->
-    <a href="index.html"><button>Revenir à la première page</button></a>
+    <!-- Bouton pour revenir à la première page -->
+    <a href="index.html" id="boutonRetour" class="return-btn">Revenir à la première page</a>
 </body>
 </html>
